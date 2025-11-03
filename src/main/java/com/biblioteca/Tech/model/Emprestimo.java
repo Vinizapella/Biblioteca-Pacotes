@@ -51,12 +51,6 @@ public class Emprestimo {
 
     @Override
     public String toString() {
-        return "Emprestimo{" +
-                "id=" + id +
-                ", id_usuario=" + id_usuario +
-                ", id_livro=" + id_livro +
-                ", data_emprestimo=" + data_emprestimo +
-                ", data_devolucao=" + data_devolucao +
-                '}';
+        return " Emprestimo [" + "id=" + id + ", id_usuario=" + id_usuario + ", id_livro=" + id_livro + ", data_emprestimo=" + data_emprestimo + ", data_devolucao=" + data_devolucao + ']';
     }
 }

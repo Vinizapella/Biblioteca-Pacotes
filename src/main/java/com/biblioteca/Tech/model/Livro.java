@@ -25,12 +25,6 @@ public class Livro {
 
     @Override
     public String toString() {
-        return "Livro{" +
-                "id=" + id +
-                ", titulo='" + titulo + '\'' +
-                ", autor='" + autor + '\'' +
-                ", ano=" + ano +
-                ", disponivel=" + disponivel +
-                '}';
+        return " Livro [" + "id=" + id + ", titulo='" + titulo + '\'' + ", autor='" + autor + '\'' + ", ano=" + ano + ", disponivel=" + disponivel + ']';
     }
 }
