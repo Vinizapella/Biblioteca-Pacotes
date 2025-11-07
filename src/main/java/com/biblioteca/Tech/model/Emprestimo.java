@@ -3,54 +3,38 @@ package com.biblioteca.Tech.model;
 import java.time.LocalDate;
 
 public class Emprestimo {
+    private Integer id;
+    private Integer livroId;
+    private String usuario;
+    private LocalDate dataEmprestimo;
+    private LocalDate dataDevolucao;
 
-    private int id;
-    private int id_usuario;
-    private int id_livro;
-    private LocalDate data_emprestimo;
-    private LocalDate data_devolucao;
+    public Emprestimo() {}
 
-    public Emprestimo(int id, int id_usuario, int id_livro, LocalDate data_emprestimo, LocalDate data_devolucao) {
-        this.id = id;
-        this.id_usuario = id_usuario;
-        this.id_livro = id_livro;
-        this.data_emprestimo = data_emprestimo;
-        this.data_devolucao = data_devolucao;
+    public Emprestimo(Integer livroId, String usuario, LocalDate dataEmprestimo) {
+        this.livroId = livroId;
+        this.usuario = usuario;
+        this.dataEmprestimo = dataEmprestimo;
     }
 
-    public Emprestimo(int id_usuario, int id_livro, LocalDate data_emprestimo, LocalDate data_devolucao) {
-        this.id_usuario = id_usuario;
-        this.id_livro = id_livro;
-        this.data_emprestimo = data_emprestimo;
-        this.data_devolucao = data_devolucao;
-    }
-
-    public LocalDate getData_emprestimo() {
-        return data_emprestimo;
-    }
-
-    public void setData_emprestimo(LocalDate data_emprestimo) {
-        this.data_emprestimo = data_emprestimo;
-    }
-
-    public LocalDate getData_devolucao() {
-        return data_devolucao;
-    }
-
-    public void setData_devolucao(LocalDate data_devolucao) {
-        this.data_devolucao = data_devolucao;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    public Integer getId() { return id; }
+    public void setId(Integer id) { this.id = id; }
+    public Integer getLivroId() { return livroId; }
+    public void setLivroId(Integer livroId) { this.livroId = livroId; }
+    public String getUsuario() { return usuario; }
+    public void setUsuario(String usuario) { this.usuario = usuario; }
+    public LocalDate getDataEmprestimo() { return dataEmprestimo; }
+    public void setDataEmprestimo(LocalDate dataEmprestimo) { this.dataEmprestimo = dataEmprestimo; }
+    public LocalDate getDataDevolucao() { return dataDevolucao; }
+    public void setDataDevolucao(LocalDate dataDevolucao) { this.dataDevolucao = dataDevolucao; }
 
     @Override
     public String toString() {
-        return " Emprestimo [" + "id=" + id + ", id_usuario=" + id_usuario + ", id_livro=" + id_livro + ", data_emprestimo=" + data_emprestimo + ", data_devolucao=" + data_devolucao + ']';
+        return String.format("ID: %s | Livro ID: %d | Usuário: %s | Emprestado: %s | Devolução: %s",
+                id == null ? "-" : id.toString(),
+                livroId,
+                usuario,
+                dataEmprestimo != null ? dataEmprestimo.toString() : "-",
+                dataDevolucao != null ? dataDevolucao.toString() : "-");
     }
 }
